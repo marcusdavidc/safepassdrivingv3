@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, CheckCircle, MapPin } from 'lucide-react'
+import { Star, CheckCircle, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import GoogleReviews from "@/components/google-reviews"
 
 const reviews = [
   {
@@ -194,34 +195,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Google Reviews Embed */}
-          <div className="mt-12 text-center">
-            <div className="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">See All Our Google Reviews</h3>
-              <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg p-8">
-                <div className="space-y-4">
-                  <div className="text-4xl">⭐⭐⭐⭐⭐</div>
-                  <h4 className="text-xl font-semibold text-gray-700">Google Reviews Widget</h4>
-                  <p className="text-gray-600">
-                    Embed Google Reviews widget here to show real-time reviews from Google My Business
-                  </p>
-                  <div className="text-sm text-gray-500 space-y-1">
-                    <p>• Display star ratings and review count</p>
-                    <p>• Show recent customer reviews</p>
-                    <p>• Link to full Google My Business profile</p>
-                  </div>
-                  <a
-                    href="https://www.google.com/search?q=SafePass+Driving+School+reviews"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    View All Reviews on Google
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <GoogleReviews />
         </div>
       </section>
 
